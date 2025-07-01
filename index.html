@@ -1,28 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Coming Soon | exoticDev</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>exoticDev – The Extraordinary Devs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      background: #0d1117;
-      color: #f0f6fc;
-      font-family: sans-serif;
+      font-family: 'Outfit', sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 2rem;
       text-align: center;
-      padding: 80px 20px;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      color: #aaaaaa;
+      margin-bottom: 2rem;
     }
     a {
       color: #58a6ff;
       text-decoration: none;
+      font-weight: bold;
+    }
+    .socials {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .socials a img {
+      width: 30px;
+      height: 30px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.2s ease;
+    }
+    .socials a:hover img {
+      transform: scale(1.1);
+    }
+    .footer {
+      margin-top: 4rem;
+      font-size: 0.85rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <h1>🚀 exoticDev is launching soon</h1>
-  <p>High-performance Shopify development & custom apps that convert.</p>
+  <h1>exoticDev</h1>
+  <h2>The Extraordinary Devs</h2>
+  <p>We're building something amazing. Stay tuned.</p>
   <p>📩 muhammad@exoticdev.com | ☎️ +92 313 6995691</p>
+
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/muhammad-r-a29880b0/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+    </a>
+    <a href="https://www.instagram.com/rameeezbhatti/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 exoticDev – All rights reserved
+  </div>
 </body>
 </html>
