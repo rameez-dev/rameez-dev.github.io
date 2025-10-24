@@ -1,82 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>exoticDev – The Extraordinary Devs</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>exoticDev — Shopify Experts for High-Performing E‑Commerce Stores</title>
+  <meta name="description" content="exoticDev is a boutique Shopify agency building fast, scalable, conversion‑focused storefronts for global brands." />
+  <meta property="og:title" content="exoticDev — Shopify Experts" />
+  <meta property="og:description" content="Boutique Shopify agency building fast, scalable, conversion‑focused storefronts for global brands." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://exoticdev.com" />
+  <meta name="theme-color" content="#0b0b0c" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#0ea5e9',
+              dark: '#0b0b0c'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(2,6,23,0.2)'
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Outfit', sans-serif;
-      background-color: #0f0f0f;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      padding: 2rem;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-      color: #aaaaaa;
-      margin-bottom: 2rem;
-    }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .socials {
-      margin-top: 2rem;
-      display: flex;
-      gap: 1.5rem;
-    }
-    .socials a img {
-      width: 30px;
-      height: 30px;
-      filter: brightness(0) invert(1);
-      transition: transform 0.2s ease;
-    }
-    .socials a:hover img {
-      transform: scale(1.1);
-    }
-    .footer {
-      margin-top: 4rem;
-      font-size: 0.85rem;
-      color: #555;
-    }
+    @keyframes fadeUp { from { opacity:0; transform: translateY(8px) } to { opacity:1; transform: translateY(0) } }
+    .fade-up { animation: fadeUp 800ms ease-out both; }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
-<body>
-  <h1>exoticDev</h1>
-  <h2>The Extraordinary Devs</h2>
-  <p>We're building something amazing. Stay tuned.</p>
-  <p>📩 muhammad@exoticdev.com | ☎️ +92 313 6995691</p>
+<body class="bg-[#0b0b0c] text-white antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/30 border-b border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="font-semibold tracking-tight text-xl">exotic<span class="text-brand">Dev</span></a>
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#work" class="hover:text-brand">Work</a>
+        <a href="#services" class="hover:text-brand">Services</a>
+        <a href="#testimonials" class="hover:text-brand">Testimonials</a>
+        <a href="#team" class="hover:text-brand">Team</a>
+        <a href="#about" class="hover:text-brand">About</a>
+        <a href="#contact" class="hover:text-brand">Contact</a>
+        <a href="#contact" class="ml-2 inline-flex items-center rounded-full bg-brand px-4 py-2 font-medium text-black hover:opacity-90">Get a Quote</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-white/10" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-white/10">
+      <div class="px-4 py-4 space-y-2 text-sm">
+        <a href="#work" class="block hover:text-brand">Work</a>
+        <a href="#services" class="block hover:text-brand">Services</a>
+        <a href="#testimonials" class="block hover:text-brand">Testimonials</a>
+        <a href="#team" class="block hover:text-brand">Team</a>
+        <a href="#about" class="block hover:text-brand">About</a>
+        <a href="#contact" class="block hover:text-brand">Contact</a>
+        <a href="#contact" class="block mt-2 inline-flex items-center rounded-full bg-brand px-4 py-2 font-medium text-black hover:opacity-90">Get a Quote</a>
+      </div>
+    </div>
+  </header>
 
-  <div class="socials">
-    <a href="https://www.linkedin.com/in/muhammad-r-a29880b0/" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-    </a>
-    <a href="https://www.instagram.com/rameeezbhatti/" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-    </a>
-  </div>
+  <!-- Hero -->
+  <section id="home" class="relative">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 sm:py-24 lg:py-28">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 fade-up">
+          <h1 class="text-4xl sm:text-5xl/tight font-bold tracking-tight">
+            Shopify Experts for <span class="text-brand">High‑Performing</span> E‑Commerce Stores
+          </h1>
+          <p class="mt-5 text-white/70 max-w-2xl">
+            We’re a boutique Shopify agency helping creative brands build fast, scalable, conversion‑focused storefronts. Trusted by leading European art & lifestyle stores.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#work" class="inline-flex items-center rounded-full bg-white px-5 py-2.5 min-h-[44px] text-black font-medium hover:opacity-90">See Our Work</a>
+            <a href="#contact" class="inline-flex items-center rounded-full border border-white/20 px-5 py-2.5 min-h-[44px] font-medium hover:border-brand hover:text-brand">Start a Project</a>
+          </div>
+        </div>
+        <div class="lg:col-span-5 fade-up lg:delay-150">
+          <div class="relative rounded-2xl border border-white/10 p-6 bg-white/5 shadow-soft">
+            <div class="text-sm text-white/70">Featured Clients</div>
+            <ul class="mt-4 grid grid-cols-2 gap-4">
+              <li class="rounded-xl bg-black/30 p-4 break-all text-sm sm:text-base">andyokay.com</li>
+              <li class="rounded-xl bg-black/30 p-4 break-all text-sm sm:text-base">crissbellini.com</li>
+              <li class="rounded-xl bg-black/30 p-4 break-all text-sm sm:text-base">modevillan.com</li>
+              <li class="rounded-xl bg-black/30 p-4 break-all text-sm sm:text-base">thebirthposter.com</li>
+              <li class="rounded-xl bg-black/30 p-4 break-all text-sm sm:text-base">kunskapstavlan.se</li>
+            </ul>
+            <p class="mt-4 text-xs text-white/50">Logos & brand marks are property of their respective owners.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="footer">
-    &copy; 2025 exoticDev – All rights reserved
-  </div>
+  <!-- Work / Portfolio -->
+  <section id="work" class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold">Selected Work</h2>
+        <a href="#contact" class="text-sm text-brand hover:underline">Need something similar?</a>
+      </div>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <!-- Existing projects -->
+        <article class="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
+          <div class="text-sm text-white/60">Theme Migration • CRO • Performance</div>
+          <h3 class="mt-2 text-xl font-semibold">Andyokay — Art Poster Store</h3>
+          <p class="mt-3 text-white/70">Developed from Nascent form. Migrated to Shopify 2.0 with modular sections and asset strategy. Improved storefront responsiveness, customer engagement and checkout clarity.</p>
+          <div class="mt-4 flex gap-4 text-sm">
+            <a href="https://andyokay.com" target="_blank" rel="noopener" class="text-brand hover:underline">Visit site</a>
+            <a href="#testimonials" class="hover:underline">Read testimonial</a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
+          <div class="text-sm text-white/60">Custom Sections • A/B Testing • SEO</div>
+          <h3 class="mt-2 text-xl font-semibold">Criss Bellini — Designer Posters</h3>
+          <p class="mt-3 text-white/70">Built custom PDP sections, schema-rich content, and collection UX patterns to support scale and organic visibility.</p>
+          <div class="mt-4 flex gap-4 text-sm">
+            <a href="https://crissbellini.com" target="_blank" rel="noopener" class="text-brand hover:underline">Visit site</a>
+            <a href="#testimonials" class="hover:underline">Read testimonial</a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
+          <div class="text-sm text-white/60">Speed • UX • Internationalization</div>
+          <h3 class="mt-2 text-xl font-semibold">Modevillan — Scandinavian Fashion</h3>
+          <p class="mt-3 text-white/70">Optimized theme assets, reduced third‑party bloat, and introduced Markets for localized multi‑region experiences.</p>
+          <div class="mt-4 flex gap-4 text-sm">
+            <a href="https://modevillan.com" target="_blank" rel="noopener" class="text-brand hover:underline">Visit site</a>
+            <a href="#testimonials" class="hover:underline">Read testimonial</a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
+          <div class="text-sm text-white/60">Theme • UX • Conversion</div>
+          <h3 class="mt-2 text-xl font-semibold">Kunskapstavlan — Lifestyle Prints</h3>
+          <p class="mt-3 text-white/70">Delivered modular sections and conversion‑oriented layouts; improved PDP clarity and bundle attach with mobile‑first UX.</p>
+          <div class="mt-4 flex gap-4 text-sm">
+            <a href="https://kunskapstavlan.com" target="_blank" rel="noopener" class="text-brand hover:underline">Visit site</a>
+            <a href="#testimonials" class="hover:underline">Read testimonial</a>
+          </div>
+        </article>
+
+        <!-- New projects added -->
+        <article class="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
+          <div class="text-sm text-white/60">Localization • UX • Performance</div>
+          <h3 class="mt-2 text-xl font-semibold">Fødselsplakat — Norway</h3>
+          <p class="mt-3 text-white/70">Implemented localized UX patterns and checkout best practices for Norwegian audiences with a focus on speed and clarity.</p>
+          <div class="mt-4 flex gap-4 text-sm">
+            <a href="https://www.fodselsplakat.no/" target="_blank" rel="noopener" class="text-brand hover:underline">Visit site</a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
+          <div class="text-sm text-white/60">Multi‑language • PDP Enhancements</div>
+          <h3 class="mt-2 text-xl font-semibold">Personlig Födelse Tavla — Sweden</h3>
+          <p class="mt-3 text-white/70">Refined PDP structure and customization flows, ensuring smooth Swedish language experience and clean mobile UX.</p>
+          <div class="mt-4 flex gap-4 text-sm">
+            <a href="https://www.personligfodelsetavla.se/" target="_blank" rel="noopener" class="text-brand hover:underline">Visit site</a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
+          <div class="text-sm text-white/60">Theme Architecture • Customizer</div>
+          <h3 class="mt-2 text-xl font-semibold">The Birth Poster — Global</h3>
+          <p class="mt-3 text-white/70">Supported a modular theme approach and product customization patterns suited for international customers and devices.</p>
+          <div class="mt-4 flex gap-4 text-sm">
+            <a href="https://www.thebirthposter.com/" target="_blank" rel="noopener" class="text-brand hover:underline">Visit site</a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
+          <div class="text-sm text-white/60">Shopify Markets • UX</div>
+          <h3 class="mt-2 text-xl font-semibold">Kunskapstavlan.se — Sweden</h3>
+          <p class="mt-3 text-white/70">Configured Markets and localized UX for the Swedish domain with consistent brand patterns and performance discipline.</p>
+          <div class="mt-4 flex gap-4 text-sm">
+            <a href="https://www.kunskapstavlan.se/" target="_blank" rel="noopener" class="text-brand hover:underline">Visit site</a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
+          <div class="text-sm text-white/60">Theme • PDP/PLP • UI</div>
+          <h3 class="mt-2 text-xl font-semibold">The Case Club LA — USA</h3>
+          <p class="mt-3 text-white/70">Delivered clean product listing and detail templates with emphasis on visual hierarchy and smooth add‑to‑cart flows.</p>
+          <div class="mt-4 flex gap-4 text-sm">
+            <a href="https://thecaseclubla.com/" target="_blank" rel="noopener" class="text-brand hover:underline">Visit site</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <!-- Services -->
+  <section id="services" class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <h2 class="text-2xl sm:text-3xl font-semibold">Services</h2>
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h3 class="font-semibold">Shopify Theme Development & Customization</h3>
+          <p class="mt-2 text-white/70">Bespoke themes, modular sections, and code standards using Liquid/JSON templates. Built for scale and maintainability.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h3 class="font-semibold">UI/UX Design & CRO</h3>
+          <p class="mt-2 text-white/70">Conversion‑focused design, heuristic reviews, A/B testing plans, and friction‑free checkout flows.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h3 class="font-semibold">Performance Optimization</h3>
+          <p class="mt-2 text-white/70">Core Web Vitals, asset governance, image strategy, and third‑party auditing for speed across devices.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h3 class="font-semibold">Seamless Migrations to Shopify</h3>
+          <p class="mt-2 text-white/70">Replatforming from WooCommerce, Magento, etc., with clean data migration, redirects, and SEO preservation.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h3 class="font-semibold">Custom Shopify App Development</h3>
+          <p class="mt-2 text-white/70">Private/public apps, storefront extensions, and admin automations to extend store functionality.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h3 class="font-semibold">Product Pages & Premium Landing Pages</h3>
+          <p class="mt-2 text-white/70">Fully customized PDPs/PLPs and high‑end campaign landers engineered for engagement and conversions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <h2 class="text-2xl sm:text-3xl font-semibold">Meet the Team</h2>
+      <p class="mt-2 text-white/70 max-w-2xl">A small, senior crew focused on performance, polish, and reliable delivery.</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <!-- Rameez -->
+        <article class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <img loading="lazy" src="https://picsum.photos/seed/rameez/640/480" alt="Muhammad Rameez" class="aspect-square w-full object-cover rounded-xl"/>
+          <h3 class="mt-4 text-xl font-semibold">Muhammad Rameez</h3>
+          <p class="text-white/60">Chief Executive Officer</p>
+          <p class="mt-3 text-white/70">Founder of exoticDev. Shopify Partner with 9+ years building high‑performing storefronts for design‑led brands across EU & US. Loves clean architecture and measurable outcomes.</p>
+        </article>
+        <!-- Engineering Director (dummy) -->
+        <article class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <img loading="lazy" src="https://picsum.photos/seed/engineering/640/480" alt="Engineering Director" class="aspect-square w-full object-cover rounded-xl"/>
+          <h3 class="mt-4 text-xl font-semibold">Ahmad Huzaifa</h3>
+          <p class="text-white/60">Engineering Director</p>
+          <p class="mt-3 text-white/70">Leads technical delivery — Liquid, theme architecture, app integrations, performance budgets, and CI workflows. Keeps our builds robust and scalable.</p>
+        </article>
+        <!-- QA / Ops (dummy) -->
+        <article class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <img loading="lazy" src="https://picsum.photos/seed/qaops/640/480" alt="Quality & Operations Lead" class="aspect-square w-full object-cover rounded-xl"/>
+          <h3 class="mt-4 text-xl font-semibold">Ashwa Zulfiqar</h3>
+          <p class="text-white/60">Quality & Operations Lead</p>
+          <p class="mt-3 text-white/70">Owns QA, UAT, and content/data ops. Ensures pixel‑perfect launches, accurate catalog uploads, and smooth go‑lives every time.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials (Verified) -->
+  <section id="testimonials" class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold">What Clients Say</h2>
+        <!-- <p class="text-sm text-white/60">Real feedback with verification links</p> -->
+      </div>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-white/90">“Finding Muhammad was one of the best things ever. 
+            From troubleshooting complex issues to implementing innovative solutions, 
+            he consistently exceeds expectations. His ability to understand our business needs 
+            and translate them into effective, tailored solutions is unmatched.”
+          </blockquote>
+          <figcaption class="mt-4 text-sm text-white/60"> — Andreas Häggkvist, Founder at andyokay.com </figcaption>
+          <div class="mt-3 text-sm">
+            <a href="https://www.linkedin.com/in/muhammad-r-a29880b0/" 
+              target="_blank" rel="noopener" 
+              class="text-brand hover:underline">
+              View proof on LinkedIn
+            </a>
+          </div>
+        </figure>
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-white/90">“A reliable partner for our theme and CRO work. The team delivers on time and communicates clearly.”</blockquote>
+          <figcaption class="mt-4 text-sm text-white/60">— Criss Bellini, crissbellini.com</figcaption>
+          <div class="mt-3 text-sm">
+            <a href="https://www.linkedin.com/in/muhammad-r-a29880b0/" 
+              target="_blank" rel="noopener" 
+              class="text-brand hover:underline">
+              View proof on LinkedIn
+            </a>
+          </div>
+        </figure>
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-white/90">“Our Scandinavian audience cares about speed and design — exoticDev nailed both with careful attention to detail.”</blockquote>
+          <figcaption class="mt-4 text-sm text-white/60">— Team Modevillan</figcaption>
+          <div class="mt-3 text-sm">
+            <a href="https://www.linkedin.com/in/muhammad-r-a29880b0/" 
+              target="_blank" rel="noopener" 
+              class="text-brand hover:underline">
+              View proof on LinkedIn
+            </a>
+          </div>
+        </figure>
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-white/90">“Clean builds, clear handover, and measurable improvements in PDP engagement. Recommended.”</blockquote>
+          <figcaption class="mt-4 text-sm text-white/60">— Kunskapstavlan.com</figcaption>
+          <div class="mt-3 text-sm">
+            <a href="https://www.linkedin.com/in/muhammad-r-a29880b0/" 
+              target="_blank" rel="noopener" 
+              class="text-brand hover:underline">
+              View proof on LinkedIn
+            </a>
+          </div>
+        </figure>
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-white/90">
+            “A reliable and skilled Shopify partner — helped us deliver a faster, more seamless global experience for our customers.”
+          </blockquote>
+          <figcaption class="mt-4 text-sm text-white/60">— The Birth Poster</figcaption>
+          <div class="mt-3 text-sm">
+            <a href="https://www.linkedin.com/in/muhammad-r-a29880b0/" 
+              target="_blank" rel="noopener" 
+              class="text-brand hover:underline">
+              View proof on LinkedIn
+            </a>
+          </div>
+        </figure>
+
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-white/90">
+            “exoticDev improved our Swedish store’s UX and product customization flow — clear, fast, and easy to work with.”
+          </blockquote>
+          <figcaption class="mt-4 text-sm text-white/60">— PersonligFodelseTavla.se</figcaption>
+          <div class="mt-3 text-sm">
+            <a href="https://www.linkedin.com/in/muhammad-r-a29880b0/" 
+              target="_blank" rel="noopener" 
+              class="text-brand hover:underline">
+              View proof on LinkedIn
+            </a>
+          </div>
+        </figure>
+
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-white/90">
+            “Dependable, fast, and design-driven — exoticDev understands how to balance performance with a beautiful UX.”
+          </blockquote>
+          <figcaption class="mt-4 text-sm text-white/60">— Kunskapstavlan</figcaption>
+          <div class="mt-3 text-sm">
+            <a href="https://www.linkedin.com/in/muhammad-r-a29880b0/" 
+              target="_blank" rel="noopener" 
+              class="text-brand hover:underline">
+              View proof on LinkedIn
+            </a>
+          </div>
+        </figure>
+
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-white/90">
+            “Clean design, smooth shopping flow, and fast delivery — exactly what we wanted for our US storefront.”
+          </blockquote>
+          <figcaption class="mt-4 text-sm text-white/60">— The Case Club LA</figcaption>
+          <div class="mt-3 text-sm">
+            <a href="https://www.linkedin.com/in/muhammad-r-a29880b0/" 
+              target="_blank" rel="noopener" 
+              class="text-brand hover:underline">
+              View proof on LinkedIn
+            </a>
+          </div>
+        </figure>
+
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-white/90">
+            “exoticDev helped us optimize speed and checkout clarity for our Norwegian customers — a noticeable improvement.”
+          </blockquote>
+          <figcaption class="mt-4 text-sm text-white/60">— Fødselsplakat.no</figcaption>
+          <div class="mt-3 text-sm">
+            <a href="https://www.linkedin.com/in/muhammad-r-a29880b0/" 
+              target="_blank" rel="noopener" 
+              class="text-brand hover:underline">
+              View proof on LinkedIn
+            </a>
+          </div>
+        </figure>
+
+      </div>
+      <p class="mt-4 text-xs text-white/50">Replace the links above with public LinkedIn posts, Google Drive view‑only email screenshots, or Trustpilot/Clutch pages for verification.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-semibold">About exoticDev</h2>
+          <p class="mt-4 text-white/70">Founded by Muhammad Rameez, exoticDev is a boutique Shopify agency crafting high-performance storefronts for creative brands, fashion labels, and DTC businesses. We blend Shopify 2.0 best practices, CRO strategies, and engineering precision to deliver stores that load fast, look beautiful, and convert better.</p>
+          <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-white/80">
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 bg-brand rounded-full"></span> Shopify Partner • Shopify Plus Ready</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 bg-brand rounded-full"></span> 11 Project Completed</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 bg-brand rounded-full"></span> 7+ Happy Clients Across Europe & the US</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 bg-brand rounded-full"></span> 5340+ Hours Logged</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 bg-brand rounded-full"></span> Developed the #1 Art Store from Scratch</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 bg-brand rounded-full"></span> Proven Portfolio & Long-Term Retainers</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h3 class="font-semibold">Quick Facts</h3>
+          <dl class="mt-4 grid grid-cols-2 gap-4 text-white/70">
+            <div>
+              <dt class="text-xs uppercase tracking-wide text-white/50">Location</dt>
+              <dd>R. Jose Espreguira No14,<br/>Viana do Castelo, 4900‑459, Portugal</dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-wide text-white/50">Availability</dt>
+              <dd>24/7</dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-wide text-white/50">Goal</dt>
+              <dd>Your success is our success, we focus on lasting partnerships, not one-time invoices.</dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-wide text-white/50">Focus</dt>
+              <dd>Speed, UX, Conversion, 100% Client Satisfaction</dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-wide text-white/50">Commitment</dt>
+              <dd>Clear Communication and On-Time Delivery</dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-wide text-white/50">Experience</dt>
+              <dd>9+ Years Dedicated to Shopify Development</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-semibold">Let’s build something great</h2>
+          <p class="mt-4 text-white/70">Tell us about your goals and we’ll outline a plan — from quick wins to long‑term growth.</p>
+          <div class="mt-6 space-y-3 text-white/80">
+            <div class="flex items-center gap-3"><span class="h-2 w-2 bg-brand rounded-full"></span><a href="mailto:info@exoticdev.com" class="hover:underline">info@exoticdev.com</a></div>
+            <div class="flex items-center gap-3"><span class="h-2 w-2 bg-brand rounded-full"></span><a href="https://wa.me/923136995691" target="_blank" rel="noopener" class="hover:underline">WhatsApp: +92 313 6995691</a></div>
+            <div class="flex items-center gap-3"><span class="h-2 w-2 bg-brand rounded-full"></span><span>R. Jose Espreguira No14, Viana do Castelo, 4900‑459, Portugal</span></div>
+          </div>
+          <div class="mt-8 flex gap-3">
+            <a href="mailto:info@exoticdev.com" class="inline-flex items-center rounded-full bg-brand px-5 py-2.5 text-black font-medium hover:opacity-90">Email Us</a>
+            <a href="https://wa.me/923136995691" target="_blank" rel="noopener" class="inline-flex items-center rounded-full border border-white/20 px-5 py-2.5 min-h-[44px] font-medium hover:border-brand hover:text-brand">Chat on WhatsApp</a>
+          </div>
+        </div>
+        <form class="rounded-2xl border border-white/10 p-6 bg-white/5 shadow-soft space-y-4" onsubmit="event.preventDefault(); alert('Thanks! We\'ll get back to you shortly.');">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm text-white/70">Name</label>
+              <input required type="text" class="mt-1 w-full rounded-xl bg-black/40 border border-white/10 px-4 py-2.5 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-brand" placeholder="Your name" />
+            </div>
+            <div>
+              <label class="block text-sm text-white/70">Email</label>
+              <input required type="email" class="mt-1 w-full rounded-xl bg-black/40 border border-white/10 px-4 py-2.5 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-brand" placeholder="you@company.com" />
+            </div>
+          </div>
+          <!-- <div>
+            <label class="block text-sm text-white/70">Project Type</label>
+            <select class="mt-1 w-full rounded-xl bg-black/40 border border-white/10 px-4 py-2.5 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-brand">
+              <option>Shopify Theme Build</option>
+              <option>Migration to 2.0</option>
+              <option>Performance Optimization</option>
+              <option>CRO / UX Improvements</option>
+              <option>Ongoing Maintenance</option>
+            </select>
+          </div> -->
+          <div>
+            <label class="block text-sm text-white/70">Message</label>
+            <textarea required rows="4" class="mt-1 w-full rounded-xl bg-black/40 border border-white/10 px-4 py-2.5 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-brand" placeholder="Tell us about your goals…"></textarea>
+          </div>
+          <button class="w-full rounded-xl bg-white text-black font-medium px-4 py-3 min-h-[48px] hover:opacity-90">Send Message</button>
+          <p class="text-xs text-white/50">By submitting, you agree to our response via email/WhatsApp.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-white/60">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div>
+          <div class="font-semibold">exotic<span class="text-brand">Dev</span></div>
+          <div class="mt-1">Shopify Experts for High‑Performing E‑Commerce Stores</div>
+        </div>
+        <div class="space-y-1">
+          <div>R. Jose Espreguira No14, Viana do Castelo, 4900‑459, Portugal</div>
+          <div><a href="mailto:info@exoticdev.com" class="hover:underline">info@exoticdev.com</a> • <a href="https://wa.me/923136995691" target="_blank" rel="noopener" class="hover:underline">+92 313 6995691</a></div>
+        </div>
+      </div>
+      <div class="mt-6 text-xs text-white/40">© <span id="year"></span> exoticDev. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('mobileNav');
+    btn?.addEventListener('click', () => nav.classList.toggle('hidden'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
